@@ -352,6 +352,20 @@
         chr1	800	900	feature4	0	+
         chr1	950	1050	feature4	0	+
 
+# Strand-specific flank
+-   method: flank
+    kwargs:
+        i: a.bed
+        r: 100
+        l: 0
+        genome: hg19
+        s: True
+    expected: |
+        chr1    101   200 feature1    0   +
+        chr1    200 300 feature2    0   +
+        chr1    50 150 feature3    0   -
+        chr1    950 1000 feature4    0   +
+
 #88888888888888888888888888888888888888888888888888888888888888888888888888888
 # genomeCoverage
 #
